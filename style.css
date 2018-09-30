@@ -1,0 +1,288 @@
+html {
+     height: 100%;
+     font-size: 100%;
+}
+ body {
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     width: 100%;
+     height: 100%;
+     margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.header-upper {
+  background: black;
+}
+
+.menu-upper {
+  margin: 0 auto;
+  display: flex;
+  width: max-content;
+  width:-moz-max-content;
+  width: -ms-max-content;
+  padding: 5px;
+}
+
+.menu-upper a {
+  font-size: 11px;
+  color: #dddddd;
+  margin-right: 50px;
+}
+
+.wrap {
+  display: flex;
+  margin: 50px 25px;
+}
+
+.logo {
+  width: 200px;
+  height: 50px;
+  background: url(img/logo.svg) no-repeat;
+}
+
+.logo:after {
+  content: ' ';
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin-top: -5px;
+  margin-right: -10px;
+  border-radius: 50%;
+  background-color: #dd2e2e;
+  float: right;
+}
+
+.menu-lower {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.menu-lower a {
+  text-transform: uppercase;
+  margin-right: 20px;
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.new {
+  background: #00a3e9;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 12px;
+}
+
+.menu-lower a::after {
+  float: right;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: url(img/down-arrow.png) no-repeat center/contain;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.menu-lower a:last-child:after {
+  content: none;
+}
+
+.icons-menu {
+  display: flex;
+  align-items: center;
+}
+
+.icons-menu i {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.search {
+  background: url(img/search.png) no-repeat center/contain;
+  margin-right: 30px;
+}
+
+.orders {
+  background: url(img/orders.png) no-repeat center/contain;
+}
+
+.orders-notify {
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: #dd2e2e;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-style: initial;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.content {
+  height: 250px;
+  background: url(img/bg.jpg) no-repeat center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.wrap-content {
+  margin: 0 auto;
+  width: max-content;
+  width: -moz-max-content;
+  width: -ms-max-content;
+}
+
+.content-title {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+}
+
+.content-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-menu a {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content-title:after {
+  content: ' ';
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  float: right;
+}
+
+.content-menu a::after {
+  content: ' ';
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 15px;
+  margin-top: 9px;
+  float: right;
+}
+
+.content-menu a:last-child:after {
+  content: none;
+}
+
+.menu-btn {
+  display: none;
+  background: url(img/menu-button.png) no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.menu-btn_close {
+  background: url(img/close.png) no-repeat;
+}
+
+/* Fallback for IE10+ */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .menu-upper {
+    max-width: 550px;
+  }
+
+  .orders-notify {
+    font-style: normal;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .menu-lower a {
+    font-size: 10px;
+  }
+
+  .menu-upper a {
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+
+  .menu-lower {
+    display: none ;
+    position: absolute;
+    left: 0;
+    align-items: normal;
+    width: 185px;
+    background: white;
+    flex-flow: column;
+    margin-top: 100px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .menu-lower a:after {
+    background: url(img/right-arrow.png) no-repeat center/contain;
+  }
+
+  .menu-lower a {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .wrap {
+    justify-content: space-between;
+  }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      height: 200px;
+    }
+
+    .content-title {
+      font-size: 35px;
+    }
+
+    .content-title:after {
+      height: 10px;
+      width: 10px;
+    }
+
+    .content-menu a {
+      font-size: 11px;
+    }
+
+    .content-menu a::after {
+      height: 3px;
+      width: 3px;
+      margin-top: 6px;
+    }
+
+  }
+
+@media screen and (max-width: 480px) {
+  .menu-upper a {
+    margin-right: 30px;
+  }
+}
